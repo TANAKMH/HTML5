@@ -1,0 +1,50 @@
+<!DOCTYPE html>>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title> Formulario </title>
+    </head>
+    <body>
+        <h1> Formulario </h1>
+
+        <form action="" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+            <label for="nome"> Nome do individuo: </label> <br/>
+
+            <input type="text" name="nome" id="nome" value="Davida"/> <br/>
+            <label for="senha">Senha: </label><br/>
+            <input type="password" name="senha"  id="senha" value="123"><br />
+            <label for="comentario">Comentario: </label><br />
+            <textarea name="comentario" id="comentario" cols="30" rows="10" >Texto</textarea><br />
+            <label for="foto">Foto: </label>
+            <input type="file" name="foto" id="foto"><br />
+
+            <input type="submit" value="Enviar dados" />
+            <button type="submit">Enviar dados</button> <br />
+            </fieldset>
+            <fieldset>
+                <legend>Outros Dados</legend>
+            <label><input type="checkbox" name="news" checked="checked"/>Receber novidades</label><br />
+
+            <label>Estado Civil</label><br />
+            <label><input type="radio" name="civil" value="S" />Solteiro</label>
+            <label><input type="radio" name="civil" value="C" checked/>Casado</label>
+            <label><input type="radio" name="civil" value="V" />Viuvo</label><br/>
+
+            <label for="estado">Estados</label>
+            <select name="estado" id="estados">
+                <option value="RJ">RIO DE JANEIRO</option>
+                <option value="SP" selected="selected">SÃO PAULO</option>
+                <option value="MG">MINAS GERAIS</option>
+
+            </select>
+            <br/>
+             </fieldset>
+
+
+
+        </form>
+    </body>
+
+</html>
