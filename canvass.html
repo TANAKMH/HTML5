@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" >
+        <title>Canvas</title>
+        <script text="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+                let canvas = document.querySelector('#draw');
+                let context = canvas.getContext('2d');
+                let canvasW = canvas.width;
+
+               
+
+                function draw(x, context){
+                    let oldX = 0;
+                    if( x > 0) {
+                        oldX = x - 1;    
+                    }
+                    context.clearRect(oldX, 0, 100, 100);
+                    context.fillStyle = '#000000';
+                    context.fillRect(x,0,100,100);
+                }
+
+                let x = 0;
+
+                window.setInterval(function(){
+                    draw(x, context);
+                    x++;
+                    if (x > canvasW ){
+                        x = 0;
+                    }
+                }, 10);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Canvas</h1>
+        <canvas id="draw" width="500" height="500"></canvas>
+    </body>
+
+</html>
